@@ -1,0 +1,14 @@
+{
+  "name": "basicexercise",
+  "version": "1.0.0",
+  "description": "section25, 269. Express Basics Exercise",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hojun Hwang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
