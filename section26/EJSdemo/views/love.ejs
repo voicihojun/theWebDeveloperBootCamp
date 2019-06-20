@@ -1,2 +1,14 @@
+<style>
+	body {
+		color: steelblue;
+	}
+</style>
+
 <h1>You fell in love with: <%= thing.toUpperCase()%> </h1>
+
+<% if(thing.toLowerCase() === "rusty") {%>
+	<p>Rusty is my friend!</p>
+<%} else {%>
+	<p>You should said Rusty!</p>
+<%}%>
 <p>P.S. this is the love.ejs file</p>
