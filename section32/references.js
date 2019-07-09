@@ -2,27 +2,11 @@ var mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/blog_demo_2", {useNewUrlParser: true});
 
-// POST - title, content
-var postSchema = new mongoose.Schema({
-	title: String,
-	content: String
-});
+var Post = require("./models/post");
 
-var Post = mongoose.model("Post", postSchema);
+var User = require("./models/user");
 
-// USER - name, email, posts
-var userSchema = new mongoose.Schema({
-	email: String,
-	name: String,
-	posts: [
-		{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: "Post"
-		}
-	]
-});
 
-var User = mongoose.model("User", userSchema);
 
 // User.create({
 // 	email: "bob@gmail.com",
@@ -30,8 +14,8 @@ var User = mongoose.model("User", userSchema);
 // });
 
 // Post.create({
-// 	title: "how to cook the best burger",
-// 	content: "blah blah blah blah blah"
+// 	title: "how to cook the best burger part.2",
+// 	content: "abcdefghijklmnopqrstuvwxyz"
 // }, function(err, post) {
 // 	User.findOne({email:"bob@gmail.com"}, function(err, foundUser) {
 // 		if(err) {
